@@ -134,13 +134,10 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 896"><rect fill="%23e6f3ff" width="1344" height="896"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 50%, var(--light-gray) 100%);
             position: relative;
             overflow: hidden;
             padding-top: 80px;
-            color: white;
         }
 
         .hero::before {
@@ -395,6 +392,12 @@
             color: var(--text-dark);
             line-height: 1.7;
             margin-bottom: 1.5rem;
+        }
+
+        .events-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .events-cta p {
@@ -685,16 +688,12 @@
         <div class="hero-content">
             <div class="hero-text fade-in">
                 <h1>Welcome to PEAKS</h1>
-                <p class="subtitle">Zurich's Premier Co-working Space</p>
+                <p class="subtitle">Join the Co-working Space in the middle of Zurich!</p>
                 
                 <div class="ea-ai-highlight">
-                    <div class="ea-ai-text">Effective Altruism &amp; AI Safety</div>
+                    <div class="ea-ai-text">Effective Altruism </break> AI Safety</div>
                 </div>
                 
-                <p class="description">
-                    A collaborative workspace in the heart of Zurich where passionate individuals working in 
-                    Effective Altruism and AI Safety research come together to tackle the world's most pressing challenges.
-                </p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">Get in Touch</a>
                     <a href="#about" class="btn btn-secondary">Learn More</a>
@@ -713,22 +712,21 @@
                 <div class="location-info fade-in">
                     <h2>Find Us in Zurich</h2>
                     <p>
-                        PEAKS is strategically located in Zurich, Switzerland's largest city and a global hub for 
-                        finance, technology, and research. Our workspace provides easy access to universities, 
-                        research institutions, and the vibrant Swiss tech ecosystem.
+                        PEAKS is located in Zurich, Switzerland's largest city and a global hub for 
+                        finance, technology, and research. Our workspace sits at the heart of the city, 
+                        with easy access to Zurich's ecosystem as well as a wide variety of food options.
                     </p>
                     <div class="location-details">
                         <h3>Address</h3>
                         <p class="address-main">Zeughausstrasse 31</p>
                         <p class="address-city">8004 Zurich, Switzerland</p>
                         <div class="location-extras">
-                            <p>Easy access via public transportation</p>
+                            <p>Easy access via public transportation from Zurich HB and Tram stations Sihlpost/HB and Stauffacher</p>
                             <p>Close to ETH Zurich and University of Zurich</p>
                         </div>
                     </div>
                     <p>
-                        Contact us for specific address details and access information. We're always happy to 
-                        arrange visits for prospective members and collaborators.
+                        Contact us in advance of your visit and for access information under <a href="mailto:zurich-office@effectivealtruism.ch">zurich-office@effectivealtruism.ch</a>. 
                     </p>
                 </div>
                 <div class="map-container">
@@ -752,23 +750,25 @@
         <div class="container">
             <div class="section-header fade-in">
                 <h2>Upcoming Events</h2>
-                <p>Join our community events, workshops, and discussions on EA and AI Safety topics</p>
             </div>
             <div class="events-content fade-in">
                 <div class="events-text">
                     <p>
-                        PEAKS regularly hosts events in collaboration with EA Zurich and the broader Swiss EA community. 
-                        From research presentations to networking sessions, our events provide opportunities to connect, 
-                        learn, and collaborate with like-minded individuals.
+                        PEAKS regularly hosts events in collaboration with Zurich AI Safety, EA Zurich and the broader Swiss EA community. 
+                        From relaxed gatherings of like-minded people to lightning talks and discussions, our events provide
+                        opportunities to learn and connect with the community.
                     </p>
                     <div class="events-cta">
-                        <p>Want to stay updated on all events? Check out our full calendar and RSVP directly through Luma.</p>
-                        <a href="https://luma.com/zais" target="_blank" class="btn btn-primary">View Full Calendar</a>
+                        <p>Want to stay updated on all events? Check out the event calendars of Zurich AI Safety and EA Zurich and RSVP directly through Luma.</p>
+                        <div class="events-buttons">
+                            <a href="https://luma.com/zais" target="_blank" class="btn btn-primary">Zurich AI Safety</a>
+                            <a href="https://lu.ma/eazurich?k=c" target="_blank" class="btn btn-secondary">EA Zurich</a>
+                        </div>
                     </div>
                 </div>
                 <div class="luma-embed">
                     <iframe 
-                        src="https://lu.ma/embed/calendar/cal-R6qQtskEzr9rQLh/events?lt=light"
+                        src="https://luma.com/eazurich"
                         width="100%" 
                         height="500" 
                         frameborder="0" 
@@ -788,28 +788,27 @@
         <div class="container">
             <div class="section-header fade-in">
                 <h2>Why PEAKS?</h2>
-                <p>A modern workspace designed for impactful collaboration and meaningful research</p>
             </div>
             <div class="features">
                 <div class="feature fade-in">
                     <div class="feature-icon">🤝</div>
-                    <h3>Collaborative Environment</h3>
-                    <p>Connect with like-minded professionals working on EA and AI Safety projects. Foster meaningful relationships and cross-disciplinary collaboration.</p>
+                    <h3>Co-working</h3>
+                    <p>Connect with like-minded professionals working on EA and AI Safety projects over lunch and work in an environment with others.</p>
                 </div>
                 <div class="feature fade-in">
                     <div class="feature-icon">🎯</div>
-                    <h3>Focused Community</h3>
-                    <p>Be part of a dedicated community focused on making the world a better place through evidence-based approaches and cutting-edge AI safety research.</p>
+                    <h3>Community</h3>
+                    <p>Be part of the office community focused on making the world a better place through evidence-based approaches.</p>
                 </div>
                 <div class="feature fade-in">
                     <div class="feature-icon">🏢</div>
                     <h3>Prime Location</h3>
-                    <p>Located in the vibrant heart of Zurich, with excellent transport connections and access to the city's thriving tech and research ecosystem.</p>
+                    <p>Our office is located in the heart of Zurich, with excellent transport connections and access to the city's thriving tech and research ecosystem.</p>
                 </div>
                 <div class="feature fade-in">
                     <div class="feature-icon">💡</div>
                     <h3>Innovation Hub</h3>
-                    <p>Access to modern facilities, meeting rooms, and resources designed to support breakthrough research and innovative project development.</p>
+                    <p>Access to modern facilities, meeting rooms, and work desks with monitors in a cozy office.</p>
                 </div>
                 <div class="feature fade-in">
                     <div class="feature-icon">🌍</div>
@@ -819,7 +818,7 @@
                 <div class="feature fade-in">
                     <div class="feature-icon">📚</div>
                     <h3>Learning Environment</h3>
-                    <p>Regular seminars, discussion groups, and learning opportunities to stay at the forefront of EA principles and AI safety developments.</p>
+                    <p>Read and borrow some of our many books on EA and AI Safety topics or discuss your learnings with others in our common room.</p>
                 </div>
             </div>
         </div>
@@ -832,8 +831,8 @@
                 <div class="community-text fade-in">
                     <h2>Our Community</h2>
                     <p>
-                        PEAKS hosts a diverse and talented community of researchers, practitioners, and organizations 
-                        working at the intersection of effective altruism and AI safety. Our members are united by a 
+                        PEAKS hosts a diverse and talented community of researchers, professionals, and organizations 
+                        working at the intersection of Effective Altruism and AI safety. Our members are united by a 
                         shared commitment to using evidence and reason to tackle the world's most pressing problems.
                     </p>
                     <p>
@@ -844,32 +843,17 @@
                 <div class="organizations fade-in">
                     <a href="https://www.apolloresearch.ai/" target="_blank" class="org-card">
                         <img src="assets/Apollo.svg" alt="Apollo Logo" class="org-logo">
-                        <h4>Apollo Research</h4>
-                        <p>AI Safety Research</p>
                     </a>
                     <a href="https://www.effectivealtruism.ch/" target="_blank" class="org-card">
                         <img src="assets/EACH.svg" alt="EACH Logo" class="org-logo">
-                        <h4>EA Switzerland</h4>
-                        <p>Effective Altruism</p>
                     </a>
                     <div class="org-card">
-                        <svg class="org-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="25" y="25" width="50" height="50" fill="#2d6a6b" rx="8"/>
-                            <circle cx="40" cy="40" r="6" fill="white"/>
-                            <circle cx="60" cy="40" r="6" fill="white"/>
-                            <circle cx="50" cy="60" r="8" fill="white"/>
-                        </svg>
                         <h4>Independent Researchers</h4>
                         <p>Various EA Fields</p>
                     </div>
                     <div class="org-card">
-                        <svg class="org-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="35" fill="#319795"/>
-                            <path d="M30 45 L50 35 L70 45 L65 55 L50 65 L35 55 Z" fill="white"/>
-                            <circle cx="50" cy="30" r="4" fill="white"/>
-                        </svg>
                         <h4>Visitors from the Community</h4>
-                        <p>International Collaboration</p>
+                        <p>International Network</p>
                     </div>
                 </div>
             </div>
