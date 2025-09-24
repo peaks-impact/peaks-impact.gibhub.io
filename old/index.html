@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEAKS Zurich</title>
-    <meta name="description" content="PEAKS Zurich is a collaborative co-working space for professionals working in Effective Altruism and AI Safety research in the heart of Zurich.">
-    <meta name="keywords" content="PEAKS, Zurich, co-working, effective altruism, AI safety, workspace, collaboration">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/peaks.svg">
+    <title>PEAKS Zürich - EA & AI Safety Co-working Space</title>
+    <meta name="description" content="PEAKS Zürich is a collaborative co-working space for professionals working in Effective Altruism and AI Safety research in the heart of Zürich.">
+    <meta name="keywords" content="PEAKS, Zürich, co-working, effective altruism, AI safety, workspace, collaboration">
     
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://lu.ma https://luma.com https://www.google.com https://maps.google.com; frame-src 'self' https://lu.ma https://luma.com https://www.google.com; img-src 'self' data: https:;">>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://lu.ma https://www.google.com https://maps.google.com; frame-src 'self' https://lu.ma https://www.google.com; img-src 'self' data: https:;">>
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -134,13 +131,10 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 896"><rect fill="%23e6f3ff" width="1344" height="896"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 50%, var(--light-gray) 100%);
             position: relative;
             overflow: hidden;
             padding-top: 80px;
-            color: white;
         }
 
         .hero::before {
@@ -150,8 +144,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff20" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>') repeat;
-            opacity: 0.1;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e2e8f0" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>') repeat;
+            opacity: 0.3;
             z-index: 0;
         }
 
@@ -170,37 +164,21 @@
         .hero-text h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            color: white;
+            color: var(--primary-blue);
             margin-bottom: 1rem;
             line-height: 1.2;
         }
 
         .hero-text .subtitle {
             font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
             font-weight: 400;
-        }
-
-        .ea-ai-highlight {
-            background: rgba(49, 151, 149, 0.9);
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            text-align: center;
-        }
-
-        .ea-ai-highlight .ea-ai-text {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         .hero-text .description {
             font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
             margin-bottom: 2.5rem;
             line-height: 1.7;
         }
@@ -240,13 +218,13 @@
 
         .btn-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: var(--primary-blue);
+            background: var(--primary-blue);
+            color: white;
             transform: translateY(-2px);
         }
 
@@ -261,7 +239,7 @@
             max-width: 400px;
             width: 100%;
             height: auto;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
             animation: float 6s ease-in-out infinite;
         }
 
@@ -270,13 +248,9 @@
             50% { transform: translateY(-20px); }
         }
 
-        /* Section Base Styles */
-        section {
-            padding: 4rem 0;
-        }
-
-        /* Location Section */
-        .location {
+        /* About Section */
+        .about {
+            padding: 6rem 0;
             background: var(--white);
         }
 
@@ -288,7 +262,7 @@
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-header h2 {
@@ -305,119 +279,11 @@
             margin: 0 auto;
         }
 
-        .location-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .location-info h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .location-details {
-            background: var(--light-gray);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-
-        .location-details h3 {
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .address-main {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.2rem;
-        }
-
-        .address-city {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .location-extras {
-            background: var(--medium-gray);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-
-        .location-extras p {
-            color: var(--text-light);
-            margin-bottom: 0.3rem;
-            font-size: 0.95rem;
-        }
-
-        .map-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .map-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Events Section */
-        .events {
-            background: var(--light-gray);
-        }
-
-        .events-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .events-text h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .events-text p {
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .events-cta p {
-            margin-bottom: 1.5rem;
-        }
-
-        .luma-embed {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            background: white;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--white);
-        }
-
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
 
         .feature {
@@ -460,6 +326,7 @@
 
         /* Community Section */
         .community {
+            padding: 6rem 0;
             background: var(--light-gray);
         }
 
@@ -497,23 +364,11 @@
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
         .org-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .org-logo {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 1rem;
         }
 
         .org-card h4 {
@@ -527,8 +382,102 @@
             font-size: 0.9rem;
         }
 
+        /* Location Section */
+        .location {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .location-info h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .location-details {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .location-details h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .location-details p {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Events Section */
+        .events {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .events-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .events-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .events-intro p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .luma-embed {
+            margin: 3rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .events-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .events-cta p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
         /* Contact Section */
         .contact {
+            padding: 6rem 0;
             background: var(--primary-blue);
             color: white;
             text-align: center;
@@ -570,11 +519,6 @@
             color: var(--accent-teal);
         }
 
-        .contact .cta-buttons {
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -608,8 +552,7 @@
             }
 
             .community-grid,
-            .location-content,
-            .events-content {
+            .location-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -661,15 +604,30 @@
     <header>
         <nav>
             <a href="#home" class="logo">
-                <img src="assets/peaks.svg" alt="PEAKS Logo" class="logo-img">
+                <svg class="logo-img" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Mountains -->
+                    <path d="M50 250 L150 150 L200 180 L250 120 L350 200 L350 350 L50 350 Z" 
+                          fill="#1a365d" stroke="none"/>
+                    <path d="M100 280 L180 200 L230 230 L280 170 L350 230 L350 350 L100 350 Z" 
+                          fill="#2d6a6b" stroke="none"/>
+                    <path d="M150 300 L220 230 L270 260 L320 200 L350 250 L350 350 L150 350 Z" 
+                          fill="#319795" stroke="none"/>
+                    
+                    <!-- Sun -->
+                    <circle cx="320" cy="80" r="25" fill="#319795"/>
+                    
+                    <!-- Text -->
+                    <text x="200" y="320" text-anchor="middle" font-family="Inter, sans-serif" 
+                          font-size="48" font-weight="700" fill="#1a365d">PEAKS</text>
+                </svg>
                 PEAKS
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#location">Location</a></li>
-                <li><a href="#events">Events</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#community">Community</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#events">Events</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu">
@@ -685,14 +643,9 @@
         <div class="hero-content">
             <div class="hero-text fade-in">
                 <h1>Welcome to PEAKS</h1>
-                <p class="subtitle">Zurich's Premier Co-working Space</p>
-                
-                <div class="ea-ai-highlight">
-                    <div class="ea-ai-text">Effective Altruism &amp; AI Safety</div>
-                </div>
-                
+                <p class="subtitle">Zürich's Premier Co-working Space for EA & AI Safety</p>
                 <p class="description">
-                    A collaborative workspace in the heart of Zurich where passionate individuals working in 
+                    A collaborative workspace in the heart of Zürich where passionate individuals working in 
                     Effective Altruism and AI Safety research come together to tackle the world's most pressing challenges.
                 </p>
                 <div class="cta-buttons">
@@ -701,48 +654,22 @@
                 </div>
             </div>
             <div class="hero-visual fade-in">
-                <img src="assets/peaks.svg" alt="PEAKS Logo" class="hero-logo">
-            </div>
-        </div>
-    </section>
-
-    <!-- Location Section -->
-    <section id="location" class="location">
-        <div class="container">
-            <div class="location-content">
-                <div class="location-info fade-in">
-                    <h2>Find Us in Zurich</h2>
-                    <p>
-                        PEAKS is strategically located in Zurich, Switzerland's largest city and a global hub for 
-                        finance, technology, and research. Our workspace provides easy access to universities, 
-                        research institutions, and the vibrant Swiss tech ecosystem.
-                    </p>
-                    <div class="location-details">
-                        <h3>Address</h3>
-                        <p class="address-main">Zeughausstrasse 31</p>
-                        <p class="address-city">8004 Zurich, Switzerland</p>
-                        <div class="location-extras">
-                            <p>Easy access via public transportation</p>
-                            <p>Close to ETH Zurich and University of Zurich</p>
-                        </div>
-                    </div>
-                    <p>
-                        Contact us for specific address details and access information. We're always happy to 
-                        arrange visits for prospective members and collaborators.
-                    </p>
-                </div>
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.3469469!2d8.5310775!3d47.3743889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0c5a4e2a05%3A0x9a1b1b1b1b1b1b1b!2sZeughausstrasse%2031%2C%208004%20Z%C3%BCrich%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1642000000000!5m2!1sen!2sch"
-                        width="100%" 
-                        height="400" 
-                        style="border:0; border-radius: 12px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="PEAKS Office Location">
-                    </iframe>
-                </div>
+                <svg class="hero-logo" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Mountains -->
+                    <path d="M50 250 L150 150 L200 180 L250 120 L350 200 L350 350 L50 350 Z" 
+                          fill="#1a365d" stroke="none"/>
+                    <path d="M100 280 L180 200 L230 230 L280 170 L350 230 L350 350 L100 350 Z" 
+                          fill="#2d6a6b" stroke="none"/>
+                    <path d="M150 300 L220 230 L270 260 L320 200 L350 250 L350 350 L150 350 Z" 
+                          fill="#319795" stroke="none"/>
+                    
+                    <!-- Sun -->
+                    <circle cx="320" cy="80" r="25" fill="#319795"/>
+                    
+                    <!-- Text -->
+                    <text x="200" y="320" text-anchor="middle" font-family="Inter, sans-serif" 
+                          font-size="48" font-weight="700" fill="#1a365d">PEAKS</text>
+                </svg>
             </div>
         </div>
     </section>
@@ -755,33 +682,32 @@
                 <p>Join our community events, workshops, and discussions on EA and AI Safety topics</p>
             </div>
             <div class="events-content fade-in">
-                <div class="events-text">
+                <div class="events-intro">
                     <p>
-                        PEAKS regularly hosts events in collaboration with EA Zurich and the broader Swiss EA community. 
+                        PEAKS regularly hosts events in collaboration with EA Zürich and the broader Swiss EA community. 
                         From research presentations to networking sessions, our events provide opportunities to connect, 
                         learn, and collaborate with like-minded individuals.
                     </p>
-                    <div class="events-cta">
-                        <p>Want to stay updated on all events? Check out our full calendar and RSVP directly through Luma.</p>
-                        <a href="https://luma.com/zais" target="_blank" class="btn btn-primary">View Full Calendar</a>
-                    </div>
                 </div>
                 <div class="luma-embed">
                     <iframe 
                         src="https://lu.ma/embed/calendar/cal-R6qQtskEzr9rQLh/events?lt=light"
                         width="100%" 
-                        height="500" 
+                        height="600" 
                         frameborder="0" 
                         style="border: 1px solid #bfcbda88; border-radius: 12px; background: white;"
                         allowfullscreen=""
                         aria-hidden="false"
                         tabindex="0"
-                        title="EA Zurich Events Calendar">
+                        title="EA Zürich Events Calendar">
                     </iframe>
+                </div>
+                <div class="events-cta">
+                    <p>Want to stay updated on all events? Check out our full calendar and RSVP directly through Luma.</p>
+                    <a href="https://lu.ma/eazurich?k=c" target="_blank" class="btn btn-primary">View Full Calendar</a>
                 </div>
             </div>
         </div>
-    </section>
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -804,7 +730,7 @@
                 <div class="feature fade-in">
                     <div class="feature-icon">🏢</div>
                     <h3>Prime Location</h3>
-                    <p>Located in the vibrant heart of Zurich, with excellent transport connections and access to the city's thriving tech and research ecosystem.</p>
+                    <p>Located in the vibrant heart of Zürich, with excellent transport connections and access to the city's thriving tech and research ecosystem.</p>
                 </div>
                 <div class="feature fade-in">
                     <div class="feature-icon">💡</div>
@@ -842,35 +768,61 @@
                     </p>
                 </div>
                 <div class="organizations fade-in">
-                    <a href="https://www.apolloresearch.ai/" target="_blank" class="org-card">
-                        <img src="assets/Apollo.svg" alt="Apollo Logo" class="org-logo">
+                    <div class="org-card">
                         <h4>Apollo Research</h4>
                         <p>AI Safety Research</p>
-                    </a>
-                    <a href="https://www.effectivealtruism.ch/" target="_blank" class="org-card">
-                        <img src="assets/EACH.svg" alt="EACH Logo" class="org-logo">
+                    </div>
+                    <div class="org-card">
                         <h4>EA Switzerland</h4>
                         <p>Effective Altruism</p>
-                    </a>
+                    </div>
                     <div class="org-card">
-                        <svg class="org-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="25" y="25" width="50" height="50" fill="#2d6a6b" rx="8"/>
-                            <circle cx="40" cy="40" r="6" fill="white"/>
-                            <circle cx="60" cy="40" r="6" fill="white"/>
-                            <circle cx="50" cy="60" r="8" fill="white"/>
-                        </svg>
                         <h4>Independent Researchers</h4>
                         <p>Various EA Fields</p>
                     </div>
                     <div class="org-card">
-                        <svg class="org-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="35" fill="#319795"/>
-                            <path d="M30 45 L50 35 L70 45 L65 55 L50 65 L35 55 Z" fill="white"/>
-                            <circle cx="50" cy="30" r="4" fill="white"/>
-                        </svg>
-                        <h4>Visitors from the Community</h4>
+                        <h4>Visiting Scholars</h4>
                         <p>International Collaboration</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info fade-in">
+                    <h2>Find Us in Zürich</h2>
+                    <p>
+                        PEAKS is strategically located in Zürich, Switzerland's largest city and a global hub for 
+                        finance, technology, and research. Our workspace provides easy access to universities, 
+                        research institutions, and the vibrant Swiss tech ecosystem.
+                    </p>
+                    <div class="location-details">
+                        <h3>Address</h3>
+                        <p>Zeughausstrasse 31</p>
+                        <p>8004 Zürich, Switzerland</p>
+                        <p>Easy access via public transportation</p>
+                        <p>Close to ETH Zurich and University of Zurich</p>
+                    </div>
+                    <p>
+                        Contact us for specific address details and access information. We're always happy to 
+                        arrange visits for prospective members and collaborators.
+                    </p>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.3469469!2d8.5310775!3d47.3743889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0c5a4e2a05%3A0x9a1b1b1b1b1b1b1b!2sZeughausstrasse%2031%2C%208004%20Z%C3%BCrich%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1642000000000!5m2!1sen!2sch"
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="PEAKS Office Location">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -888,15 +840,15 @@
                         <a href="mailto:zurich-office@effectivealtruism.ch">zurich-office@effectivealtruism.ch</a>
                     </div>
                     <div class="contact-item">
-                        <span>🌍</span>
+                        <span>🌐</span>
                         <a href="https://www.effectivealtruism.ch/" target="_blank">EA Switzerland</a>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
-                        <span>Zeughausstrasse 31, 8004 Zurich</span>
+                        <span>Zeughausstrasse 31, 8004 Zürich</span>
                     </div>
                 </div>
-                <div class="cta-buttons">
+                <div class="cta-buttons" style="margin-top: 2rem;">
                     <a href="mailto:zurich-office@effectivealtruism.ch" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
@@ -906,7 +858,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 PEAKS Zurich. A collaborative space for EA and AI Safety research.</p>
+            <p>&copy; 2025 PEAKS Zürich. A collaborative space for EA and AI Safety research.</p>
         </div>
     </footer>
 
