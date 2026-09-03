@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEAKS Zurich</title>
-    <meta name="description" content="PEAKS Zurich is a collaborative coworking space for professionals working in Effective Altruism and AI Safety research in the heart of Zurich.">
-    <meta name="keywords" content="PEAKS, Zurich, coworking, effective altruism, AI safety, workspace, collaboration">
+    <meta name="description" content="PEAKS Zurich is a collaborative coworking space for professionals working in Effective Altruism, AI Safety and Biosecurity in the heart of Zurich.">
+    <meta name="keywords" content="PEAKS, Zurich, coworking, effective altruism, AI safety, biosecurity, workspace, collaboration">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/peaks-no-text-circle.png">
@@ -200,7 +200,7 @@
             color: white;
             text-transform: uppercase;
             letter-spacing: 2px;
-            line-height: 4.5rem;
+            line-height: 3.4rem;
         }
 
         .cta-buttons {
@@ -531,6 +531,10 @@
             font-size: 0.9rem;
         }
 
+        .organizations .org-card:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+        }
+
         /* Contact Section */
         .contact {
             background: var(--primary-blue);
@@ -701,7 +705,7 @@
                 <p class="subtitle">Join the Coworking Space in the middle of Zurich!</p>
                 
                 <div class="ea-ai-highlight">
-                    <div class="ea-ai-text">Effective Altruism <br> AI Safety</div>
+                    <div class="ea-ai-text">Effective Altruism <br> AI Safety <br> Biosecurity</div>
                 </div>
                 <p class="description">
                     <span>📍</span>
@@ -714,7 +718,7 @@
                 </div>
                 <br><br>
                 <p class="description">
-                    <span>We offer public coworking every <strong>Tuesday</strong> and <strong>Thursday</strong>, for people interested in Effective Altruism or AI Safety. If you are curious about the space, these coworking days are the perfect opportunity to check it out and get in touch with the community.</span>
+                    <span>We offer public coworking every <strong>Tuesday</strong> and <strong>Thursday</strong>, for people interested in Effective Altruism, AI Safety or Biosecurity. If you are curious about the space, these coworking days are the perfect opportunity to check it out and get in touch with the community.</span>
                 </p>
             </div>
             <div class="hero-visual fade-in">
@@ -772,15 +776,16 @@
             <div class="events-content fade-in">
                 <div class="events-text">
                     <p>
-                        PEAKS regularly hosts events in collaboration with Zurich AI Safety, EA Zurich and the broader Swiss EA community. 
+                        PEAKS regularly hosts events in collaboration with Zurich AI Safety, EA Zurich, the Zurich Biosecurity Hub and the broader Swiss EA community. 
                         From relaxed gatherings of like-minded people to lightning talks and discussions, our events provide
                         opportunities to learn and connect with the community.
                     </p>
                     <div class="events-cta">
-                        <p>Want to stay updated on all events? Check out the event calendars of Zurich AI Safety and EA Zurich and RSVP directly through Luma.</p>
+                        <p>Want to stay updated on all events? Check out the event calendars of Zurich AI Safety, EA Zurich and the Zurich Biosecurity Hub and RSVP directly through Luma.</p>
                         <div class="events-buttons">
                             <a href="https://luma.com/zais" target="_blank" class="btn btn-primary">Zurich AI Safety</a>
                             <a href="https://lu.ma/eazurich?k=c" target="_blank" class="btn btn-secondary">EA Zurich</a>
+                            <a href="https://luma.com/zurich-biosecurity-hub" target="_blank" class="btn btn-secondary">Zurich Biosecurity Hub</a>
                         </div>
                     </div>
                 </div>
@@ -810,7 +815,7 @@
                 <div class="feature fade-in">
                     <div class="feature-icon">🤝</div>
                     <h3>Coworking</h3>
-                    <p>Connect with like-minded professionals working on EA and AI Safety projects over lunch and work in an environment with others.</p>
+                    <p>Connect with like-minded professionals working on EA, AI Safety and Biosecurity projects over lunch and work in an environment with others.</p>
                 </div>
                 <div class="feature fade-in">
                     <div class="feature-icon">🎯</div>
@@ -830,12 +835,12 @@
                 <div class="feature fade-in">
                     <div class="feature-icon">🌍</div>
                     <h3>Global Network</h3>
-                    <p>Connect with the international EA and AI Safety communities through events, workshops, and collaborative opportunities.</p>
+                    <p>Connect with the international EA, AI Safety and Biosecurity communities through events, workshops, and collaborative opportunities.</p>
                 </div>
                 <div class="feature fade-in">
                     <div class="feature-icon">📚</div>
                     <h3>Learning Environment</h3>
-                    <p>Read and borrow some of our many books on EA and AI Safety topics or discuss your learnings with others in our common room.</p>
+                    <p>Read and borrow some of our many books on EA, AI Safety and Biosecurity topics or discuss your learnings with others in our common room.</p>
                 </div>
             </div>
         </div>
@@ -849,7 +854,7 @@
                     <h2>Our Community</h2>
                     <p>
                         PEAKS hosts a diverse and talented community of researchers, professionals, and organizations 
-                        working at the intersection of Effective Altruism and AI safety. Our members are united by a 
+                        working at the intersection of Effective Altruism, AI safety and biosecurity. Our members are united by a 
                         shared commitment to using evidence and reason to tackle the world's most pressing problems.
                     </p>
                     <p>
@@ -863,6 +868,9 @@
                     </a>
                     <a href="https://www.apolloresearch.ai/" target="_blank" class="org-card">
                         <img src="assets/Apollo.svg" alt="Apollo Logo" class="org-logo">
+                    </a>
+                    <a href="https://zurichbiosecurity.ch/" target="_blank" class="org-card">
+                        <img src="assets/ZBH.svg" alt="Zurich Biosecurity Hub Logo" class="org-logo">
                     </a>
                     <div class="org-card">
                         <h4>Independent Researchers</h4>
@@ -910,8 +918,11 @@
                 <div class="contact-item">
                     <a href="https://zurich.aisafety.ch/" target="_blank">Zurich AI Safety</a>
                 </div>
+                <div class="contact-item">
+                    <a href="https://zurichbiosecurity.ch/" target="_blank">Zurich Biosecurity Hub</a>
+                </div>
             </div>
-            <p>&copy; 2025 PEAKS Zurich. A collaborative space for EA and AI Safety research.</p>
+            <p>&copy; 2025 PEAKS Zurich. A collaborative space for EA, AI Safety and Biosecurity work.</p>
         </div>
     </footer>
 
