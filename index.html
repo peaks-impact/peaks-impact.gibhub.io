@@ -17,7 +17,7 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Geist:wght@600&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -467,11 +467,10 @@
             background: var(--light-gray);
         }
 
-        .community-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+        .community-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
         }
 
         .community-text h2 {
@@ -490,7 +489,8 @@
 
         .organizations {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 1fr;
             gap: 1rem;
         }
 
@@ -507,6 +507,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            grid-column: span 2;
+            min-height: 150px;
+        }
+
+        .org-card.org-text {
+            grid-column: span 3;
         }
 
         .org-card:hover {
@@ -520,6 +526,43 @@
             object-fit: contain;
         }
 
+        /* Wide wordmarks would look tiny in the square box */
+        .org-logo.wordmark {
+            width: 100%;
+            max-width: 200px;
+            height: 60px;
+        }
+
+        .org-logo.wordmark.two-line {
+            height: 90px;
+        }
+
+        /* Organizations without a clear logo: their name as it appears on their site */
+        .org-name {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.5rem;
+            white-space: nowrap;
+        }
+
+        .org-name img {
+            width: 52px;
+            height: 52px;
+        }
+
+        .org-name.eurosafeai {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            color: #022583;
+        }
+
+        .org-name.zais {
+            font-family: 'Geist', sans-serif;
+            font-weight: 600;
+            color: #020522;
+        }
+
         .org-card h4 {
             color: var(--primary-blue);
             font-weight: 600;
@@ -529,10 +572,6 @@
         .org-card p {
             color: var(--text-light);
             font-size: 0.9rem;
-        }
-
-        .organizations .org-card:last-child:nth-child(odd) {
-            grid-column: 1 / -1;
         }
 
         /* Contact Section */
@@ -624,7 +663,6 @@
                 font-size: 2.5rem;
             }
 
-            .community-grid,
             .location-content,
             .events-content {
                 grid-template-columns: 1fr;
@@ -632,7 +670,34 @@
             }
 
             .organizations {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .org-card {
+                grid-column: span 1;
+                min-height: 120px;
+                padding: 1rem;
+            }
+
+            /* An odd logo out in the last row takes the full width */
+            .org-card.org-text,
+            .org-card:not(.org-text):nth-child(odd):nth-last-child(3) {
+                grid-column: span 2;
+            }
+
+            .org-logo {
+                width: 110px;
+                height: 110px;
+            }
+
+            .org-name {
+                font-size: 1.1rem;
+                white-space: normal;
+            }
+
+            .org-name img {
+                width: 36px;
+                height: 36px;
             }
 
             .cta-buttons {
@@ -849,37 +914,53 @@
     <!-- Community Section -->
     <section id="community" class="community">
         <div class="container">
-            <div class="community-grid">
-                <div class="community-text fade-in">
-                    <h2>Our Community</h2>
-                    <p>
-                        PEAKS hosts a diverse and talented community of researchers, professionals, and organizations 
-                        working at the intersection of Effective Altruism, AI safety and biosecurity. Our members are united by a 
-                        shared commitment to using evidence and reason to tackle the world's most pressing problems.
-                    </p>
-                    <p>
-                        From established organizations to independent researchers, our community spans multiple disciplines 
-                        and approaches, creating a rich environment for collaboration and knowledge exchange.
-                    </p>
+            <div class="community-text fade-in">
+                <h2>Our Community</h2>
+                <p>
+                    PEAKS hosts a diverse and talented community of researchers, professionals, and organizations
+                    working at the intersection of Effective Altruism, AI safety and biosecurity. Our members are united by a
+                    shared commitment to using evidence and reason to tackle the world's most pressing problems.
+                </p>
+                <p>
+                    From established organizations to independent researchers, our community spans multiple disciplines
+                    and approaches, creating a rich environment for collaboration and knowledge exchange.
+                </p>
+            </div>
+            <div class="organizations fade-in">
+                <a href="https://www.effectivealtruism.ch/" target="_blank" class="org-card">
+                    <img src="assets/EACH.svg" alt="EACH Logo" class="org-logo">
+                </a>
+                <a href="https://www.apolloresearch.ai/" target="_blank" class="org-card">
+                    <img src="assets/Apollo.svg" alt="Apollo Logo" class="org-logo">
+                </a>
+                <a href="https://zurichbiosecurity.ch/" target="_blank" class="org-card">
+                    <img src="assets/ZBH.svg" alt="Zurich Biosecurity Hub Logo" class="org-logo">
+                </a>
+                <a href="https://epoch.ai/" target="_blank" class="org-card">
+                    <img src="assets/Epoch.svg" alt="Epoch AI Logo" class="org-logo wordmark">
+                </a>
+                <a href="https://forecastingresearch.org/" target="_blank" class="org-card">
+                    <img src="assets/FRI.svg" alt="Forecasting Research Institute Logo" class="org-logo wordmark">
+                </a>
+                <a href="https://www.pivotal-research.org/" target="_blank" class="org-card">
+                    <img src="assets/Pivotal.svg" alt="Pivotal Research Logo" class="org-logo wordmark">
+                </a>
+                <a href="https://safe.eu/" target="_blank" class="org-card">
+                    <span class="org-name eurosafeai"><img src="assets/EuroSafeAI.png" alt="">EuroSafeAI</span>
+                </a>
+                <a href="https://effektiv-spenden.org/" target="_blank" class="org-card">
+                    <img src="assets/EffektivSpenden.png" alt="Effektiv Spenden Logo" class="org-logo wordmark two-line">
+                </a>
+                <a href="https://zurich.aisafety.ch/" target="_blank" class="org-card">
+                    <span class="org-name zais">Zurich AI Safety</span>
+                </a>
+                <div class="org-card org-text">
+                    <h4>Independent Researchers</h4>
+                    <p>Various EA Fields</p>
                 </div>
-                <div class="organizations fade-in">
-                    <a href="https://www.effectivealtruism.ch/" target="_blank" class="org-card">
-                        <img src="assets/EACH.svg" alt="EACH Logo" class="org-logo">
-                    </a>
-                    <a href="https://www.apolloresearch.ai/" target="_blank" class="org-card">
-                        <img src="assets/Apollo.svg" alt="Apollo Logo" class="org-logo">
-                    </a>
-                    <a href="https://zurichbiosecurity.ch/" target="_blank" class="org-card">
-                        <img src="assets/ZBH.svg" alt="Zurich Biosecurity Hub Logo" class="org-logo">
-                    </a>
-                    <div class="org-card">
-                        <h4>Independent Researchers</h4>
-                        <p>Various EA Fields</p>
-                    </div>
-                    <div class="org-card">
-                        <h4>Visitors from the Community</h4>
-                        <p>International Network</p>
-                    </div>
+                <div class="org-card org-text">
+                    <h4>Visitors from the Community</h4>
+                    <p>International Network</p>
                 </div>
             </div>
         </div>
