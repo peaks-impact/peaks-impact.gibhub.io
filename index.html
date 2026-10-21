@@ -508,7 +508,7 @@
             align-items: center;
             justify-content: center;
             grid-column: span 2;
-            min-height: 150px;
+            min-height: 170px;
         }
 
         .org-card.org-text {
@@ -520,35 +520,28 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
+        /* Each logo sets its own --logo-h so they all carry a similar visual weight:
+           wide wordmarks get less height, compact or boxed logos more.
+           The logo files are trimmed to their visible edges for this to work. */
         .org-logo {
-            width: 150px;
-            height: 150px;
+            height: var(--logo-h, 80px);
+            width: auto;
+            max-width: 100%;
             object-fit: contain;
-        }
-
-        /* Wide wordmarks would look tiny in the square box */
-        .org-logo.wordmark {
-            width: 100%;
-            max-width: 200px;
-            height: 60px;
-        }
-
-        .org-logo.wordmark.two-line {
-            height: 90px;
         }
 
         /* Organizations without a clear logo: their name as it appears on their site */
         .org-name {
             display: flex;
             align-items: center;
-            gap: 0.6rem;
-            font-size: 1.5rem;
+            gap: 0.7rem;
+            font-size: clamp(1.25rem, 2.8vw, 2.2rem);
             white-space: nowrap;
         }
 
         .org-name img {
-            width: 52px;
-            height: 52px;
+            width: 1.9em;
+            height: 1.9em;
         }
 
         .org-name.eurosafeai {
@@ -686,18 +679,12 @@
             }
 
             .org-logo {
-                width: 110px;
-                height: 110px;
+                height: calc(var(--logo-h, 80px) * 0.6);
             }
 
             .org-name {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
                 white-space: normal;
-            }
-
-            .org-name img {
-                width: 36px;
-                height: 36px;
             }
 
             .cta-buttons {
@@ -928,28 +915,28 @@
             </div>
             <div class="organizations fade-in">
                 <a href="https://www.effectivealtruism.ch/" target="_blank" class="org-card">
-                    <img src="assets/EACH.svg" alt="EACH Logo" class="org-logo">
+                    <img src="assets/EACH.svg" alt="EACH Logo" class="org-logo" style="--logo-h: 100px">
                 </a>
                 <a href="https://www.apolloresearch.ai/" target="_blank" class="org-card">
-                    <img src="assets/Apollo.svg" alt="Apollo Logo" class="org-logo">
+                    <img src="assets/Apollo.svg" alt="Apollo Logo" class="org-logo" style="--logo-h: 64px">
                 </a>
                 <a href="https://zurichbiosecurity.ch/" target="_blank" class="org-card">
-                    <img src="assets/ZBH.svg" alt="Zurich Biosecurity Hub Logo" class="org-logo">
+                    <img src="assets/ZBH.svg" alt="Zurich Biosecurity Hub Logo" class="org-logo" style="--logo-h: 100px">
                 </a>
                 <a href="https://epoch.ai/" target="_blank" class="org-card">
-                    <img src="assets/Epoch.svg" alt="Epoch AI Logo" class="org-logo wordmark">
+                    <img src="assets/Epoch.svg" alt="Epoch AI Logo" class="org-logo" style="--logo-h: 48px">
                 </a>
                 <a href="https://forecastingresearch.org/" target="_blank" class="org-card">
-                    <img src="assets/FRI.svg" alt="Forecasting Research Institute Logo" class="org-logo wordmark">
+                    <img src="assets/FRI.svg" alt="Forecasting Research Institute Logo" class="org-logo" style="--logo-h: 44px">
                 </a>
                 <a href="https://www.pivotal-research.org/" target="_blank" class="org-card">
-                    <img src="assets/Pivotal.svg" alt="Pivotal Research Logo" class="org-logo wordmark">
+                    <img src="assets/Pivotal.svg" alt="Pivotal Research Logo" class="org-logo" style="--logo-h: 60px">
                 </a>
                 <a href="https://safe.eu/" target="_blank" class="org-card">
                     <span class="org-name eurosafeai"><img src="assets/EuroSafeAI.png" alt="">EuroSafeAI</span>
                 </a>
                 <a href="https://effektiv-spenden.org/" target="_blank" class="org-card">
-                    <img src="assets/EffektivSpenden.png" alt="Effektiv Spenden Logo" class="org-logo wordmark two-line">
+                    <img src="assets/EffektivSpenden.png" alt="Effektiv Spenden Logo" class="org-logo" style="--logo-h: 97px">
                 </a>
                 <a href="https://zurich.aisafety.ch/" target="_blank" class="org-card">
                     <span class="org-name zais">Zurich AI Safety</span>
